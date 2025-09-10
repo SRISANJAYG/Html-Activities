@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <!-- Please NOTE that the link to assets (like images) need to be set in global context.
+For example:
+To access an imalion is the king ge from assets folder correct way to set src attribute is 
+
+src = 'profile.png'
+
+instead of 
+
+src = './assets/profile.png'
+-->
+
+  <head>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: #222;
+        color: #fff;
+      }
+      .item1 {
+        width: 20vh;
+        height: 20vh;
+        margin: 1vh;
+        order: 5;
+      }
+      .item2 {
+        width: 20vh;
+        height: 20vh;
+        margin: 1vh;
+        order: 3;
+      }
+      .item3 {
+        width: 20vh;
+        height: 20vh;
+        margin: 1vh;
+        order: 17;
+      }
+      .item4 {
+        width: 20vh;
+        height: 20vh;
+        margin: 1vh;
+        order: 13;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item1" style="background-color: red"></div>
+      <div class="item2" style="background-color: green"></div>
+      <div class="item3" style="background-color: blue"></div>
+      <div class="item4" style="background-color: yellow"></div>
+    </div>
+  </body>
+</html>
