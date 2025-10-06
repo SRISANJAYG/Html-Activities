@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ferris Wheel Project</title>
+  <style>
+    body {
+      background-color: antiquewhite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .ferris {
+      width: 600px;
+      height: 600px;
+      border: 8px solid black;
+      border-radius: 50%;
+      position: relative;
+      animation: spin 12s linear infinite;
+    }
+
+    /* spokes */
+    .spoke {
+      width: 4px;
+      height: 300px; /* radius length */
+      background: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: top center;
+    }
+
+    #spoke1 { transform: rotate(0deg); }
+    #spoke2 { transform: rotate(60deg); }
+    #spoke3 { transform: rotate(120deg); }
+    #spoke4 { transform: rotate(180deg); }
+    #spoke5 { transform: rotate(240deg); }
+    #spoke6 { transform: rotate(300deg); }
+
+    /* cabins */
+    .box {
+      width: 70px;
+      height: 70px;
+      background-color: burlywood;
+      border: 4px solid black;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      animation: counterSpin 12s linear infinite;
+    }
+
+    #box1 { top: 0%;   left: 50%;   }
+    #box2 { top: 15%;  left: 92%; }
+    #box3 { top: 85%;  left: 92%;   }
+    #box4 { top: 100%; left: 50%;   }
+    #box5 { top: 85%;  left: 8%;    }
+    #box6 { top: 15%;  left: 8%;   }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    @keyframes counterSpin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to   { transform: translate(-50%, -50%) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="ferris">
+    <!-- 6 spokes -->
+    <div class="spoke" id="spoke1"></div>
+    <div class="spoke" id="spoke2"></div>
+    <div class="spoke" id="spoke3"></div>
+    <div class="spoke" id="spoke4"></div>
+    <div class="spoke" id="spoke5"></div>
+    <div class="spoke" id="spoke6"></div>
+
+    <!-- 6 cabins -->
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <div class="box" id="box6"></div>
+  </div>
+</body>
+</html>
